@@ -1,0 +1,6 @@
+- name: Uptime
+  hosts: all
+  tasks:
+    - name: uptime
+      command: uptime
+        
