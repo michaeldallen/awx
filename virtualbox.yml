@@ -1,0 +1,11 @@
+Add virtualbox.list to /etc/apt/sources.list.d
+
+deb http://download.virtualbox.org/virtualbox/debian buster contrib
+Add Oracle VirtualBox public key:
+
+wget https://www.virtualbox.org/download/oracle_vbox_2016.asc
+sudo apt-key add oracle_vbox_2016.asc
+Install virtualbox-6.1
+
+sudo apt-get update
+sudo apt-get install virtualbox-6.1
