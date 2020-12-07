@@ -4,3 +4,6 @@
     - name: uptime
       command: uptime
         
+    - name: check docker engine responsiveness
+      command: docker ps
+      
