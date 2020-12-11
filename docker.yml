@@ -6,7 +6,7 @@
 
 
      
-    - name: Install a list of packages
+    - name: Install some required packages first
       apt:
         pkg:
         - apt-transport-https
