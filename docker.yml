@@ -35,5 +35,12 @@
         - docker-ce
         - cgroupfs-mount
         
-        
-        
+    - name: have the Docker service started and automatically launched at boot
+      systemd:
+        name: docker
+        enabled: yes
+        state: restarted
+        sudo systemctl enable docker
+
+
+
