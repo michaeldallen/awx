@@ -4,3 +4,15 @@
     - debug:
         msg: "instructions from https://withblue.ink/2020/06/24/docker-and-docker-compose-on-raspberry-pi-os.html"
 
+
+     
+    - name: Install a list of packages
+      apt:
+        pkg:
+        - apt-transport-https
+        - ca-certificates
+        - curl
+        - gnupg2
+        - software-properties-common
+        
+        
