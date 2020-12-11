@@ -19,3 +19,7 @@
       apt_key:
         url: https://download.docker.com/linux/raspbian/gpg
         state: present
+    - name: Add the Docker official repos
+      apt_repository:
+        repo: deb [arch=armhf] https://download.docker.com/linux/raspbian      buster stable
+        state: present
