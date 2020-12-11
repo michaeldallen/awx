@@ -1,0 +1,6 @@
+- name: install docker
+  hosts: all
+  tasks:
+    - debug:
+        msg: "instructions from https://withblue.ink/2020/06/24/docker-and-docker-compose-on-raspberry-pi-os.html"
+
