@@ -40,7 +40,6 @@
         name: docker
         enabled: yes
         state: restarted
-        sudo systemctl enable docker
 
 
 
