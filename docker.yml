@@ -8,6 +8,7 @@
      
     - name: Install some required packages first
       apt:
+        update_cache: yes
         pkg:
         - apt-transport-https
         - ca-certificates
