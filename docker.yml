@@ -30,17 +30,17 @@
       apt:
         update_cache: yes
         
-#    - name: Install Docker
-#      apt:
-#        pkg:
-#        - docker-ce
-#        - cgroupfs-mount
+    - name: Install Docker
+      apt:
+        pkg:
+        - docker-ce
+        - cgroupfs-mount
         
-#    - name: have the Docker service started and automatically launched at boot
-#      systemd:
-#        name: docker
-#        enabled: yes
-#        state: restarted
+    - name: have the Docker service started and automatically launched at boot
+      systemd:
+        name: docker
+        enabled: yes
+        state: restarted
 
 
 
