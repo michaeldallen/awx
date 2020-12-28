@@ -13,3 +13,9 @@
         path: "/root/.ssh"
         state: directory
         
+    - name: ensure ~/.ssh/authorized_keys exists
+      file:
+        path: /root/.ssh/authorized_keys
+        state: touch 
+        
+        
