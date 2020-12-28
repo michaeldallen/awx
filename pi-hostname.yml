@@ -30,4 +30,4 @@
         
 
     - debug:
-        msg: "what the heck ... {{ mac2hostname.name }}"
+        msg: "what the heck ... {{ mac2hostname[hostvars[inventory_hostname].ansible_default_ipv4.macaddress].name }}"
