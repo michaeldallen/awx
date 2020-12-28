@@ -3,7 +3,7 @@
 
   tasks:
  
-    - name: add management public key
-      debug:
-        msg: my mac 
+    - debug:
+        msg: "{{ hostvars[inventory_hostname] }}"
+        
 
