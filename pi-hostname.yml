@@ -1,9 +1,20 @@
 - name: set hostname based on MAC
   hosts: all
 
+  vars:
+    mac2hostname:
+      "b8:27:eb:06:d5:d5" : "pia"
+      "b8:27:eb:ca:9f:5a" : "pib"
+      "b8:27:eb:a1:54:0c" : "pic"
+      "b8:27:eb:e4:31:3a" : "pid"
+      "b8:27:eb:11:c1:19" : "pie"
+      "b8:27:eb:0a:c4:ea" : "pif"
+      "b8:27:eb:59:cc:89" : "pig"
+      "b8:27:eb:53:83:54" : "pih"
+      "b8:27:eb:1d:65:93" : "pii"
+      
+      
   tasks:
- 
-
 
     - debug:
         msg: "{{ hostvars[inventory_hostname].ansible_default_ipv4.macaddress }}"
