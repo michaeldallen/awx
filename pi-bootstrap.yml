@@ -10,10 +10,5 @@
         user: root 
         key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILZRBMNpKYCxW5RfcMlVOZzM9msh2s6s3OzWS4e97xAm g4-pinet"
  
-    - name: notes 1
-      debug:
-        msg: "https://medium.com/@visualskyrim/ansible-playbook-deploy-the-public-key-to-remote-hosts-da3f3b4b5481"
-  
-    - name: notes 2
-      debug:
-        msg: "http://minimum-viable-automation.com/ansible/use-ansible-create-user-accounts-setup-ssh-keys/"
+# https://medium.com/@visualskyrim/ansible-playbook-deploy-the-public-key-to-remote-hosts-da3f3b4b5481
+# http://minimum-viable-automation.com/ansible/use-ansible-create-user-accounts-setup-ssh-keys/
