@@ -1,4 +1,4 @@
-- name: add management ssh key
+- name: set up for management ssh
   hosts: all
   become: true
   become_user: root
@@ -12,3 +12,10 @@
  
 # https://medium.com/@visualskyrim/ansible-playbook-deploy-the-public-key-to-remote-hosts-da3f3b4b5481
 # http://minimum-viable-automation.com/ansible/use-ansible-create-user-accounts-setup-ssh-keys/
+
+    - name: disable default user
+      user:
+        name: pi
+        password: "!"
+        
+        
