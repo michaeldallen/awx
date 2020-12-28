@@ -5,6 +5,11 @@
 
   tasks:
  
+    - name: maybe a better way
+      authorized_key:
+        user: root 
+        key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILZRBMNpKYCxW5RfcMlVOZzM9msh2s6s3OzWS4e97xAm g4-pinet"
+ 
     - name: Thanks
       debug:
         msg: "Thank you, Chris Kong: https://medium.com/@visualskyrim/ansible-playbook-deploy-the-public-key-to-remote-hosts-da3f3b4b5481"
