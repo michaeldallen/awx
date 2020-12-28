@@ -3,9 +3,6 @@
 
   tasks:
  
-    - debug:
-        msg: "{{ hostvars[inventory_hostname] }}"
-        
 
 
     - debug:
