@@ -10,7 +10,7 @@
   
     - name: ensure ~/.ssh exists
       file:
-        path: "/root/.ssh"
+        path: /root/.ssh
         state: directory
         
     - name: ensure ~/.ssh/authorized_keys exists
@@ -18,4 +18,7 @@
         path: /root/.ssh/authorized_keys
         state: touch 
         
-        
+    - name: add management public key
+      lineinfile:
+        path: /root/.ssh/authorized_keys
+        line: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILZRBMNpKYCxW5RfcMlVOZzM9msh2s6s3OzWS4e97xAm g4-pinet"
