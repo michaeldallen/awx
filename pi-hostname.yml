@@ -1,0 +1,9 @@
+- name: set hostname based on MAC
+  hosts: all
+
+  tasks:
+ 
+    - name: add management public key
+      debug:
+        msg: my mac 
+
