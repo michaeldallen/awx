@@ -2,8 +2,9 @@
   hosts: all
   become: true
   become_user: root
-  tasks:
-  
+ 
+ tasks:
+ 
     - name: Thanks
       debug:
         msg: "Thank you, Chris Kong: https://medium.com/@visualskyrim/ansible-playbook-deploy-the-public-key-to-remote-hosts-da3f3b4b5481"
@@ -22,3 +23,16 @@
       lineinfile:
         path: /root/.ssh/authorized_keys
         line: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILZRBMNpKYCxW5RfcMlVOZzM9msh2s6s3OzWS4e97xAm g4-pinet"
+
+--- 
+- name: next bit
+  hosts: all
+  become: true
+  become_user: root
+ 
+ tasks:
+ 
+    - name: Thanks
+      debug:
+        msg: "Thank you, Chris Kong: https://medium.com/@visualskyrim/ansible-playbook-deploy-the-public-key-to-remote-hosts-da3f3b4b5481"
+  
