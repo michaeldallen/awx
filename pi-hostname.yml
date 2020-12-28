@@ -26,8 +26,4 @@
   tasks:
 
     - debug:
-        msg: "{{ hostvars[inventory_hostname].ansible_default_ipv4.macaddress }}"
-        
-
-    - debug:
-        msg: "what the heck ... {{ mac2hostname[hostvars[inventory_hostname].ansible_default_ipv4.macaddress].name }}"
+        msg: "I think I am {{ mac2hostname[hostvars[inventory_hostname].ansible_default_ipv4.macaddress].name }}"
