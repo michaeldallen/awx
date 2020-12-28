@@ -5,26 +5,15 @@
 
   tasks:
  
-    - name: maybe a better way
+    - name: add management public key
       authorized_key:
         user: root 
         key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILZRBMNpKYCxW5RfcMlVOZzM9msh2s6s3OzWS4e97xAm g4-pinet"
  
-    - name: Thanks
+    - name: notes 1
       debug:
-        msg: "Thank you, Chris Kong: https://medium.com/@visualskyrim/ansible-playbook-deploy-the-public-key-to-remote-hosts-da3f3b4b5481"
+        msg: "https://medium.com/@visualskyrim/ansible-playbook-deploy-the-public-key-to-remote-hosts-da3f3b4b5481"
   
-    - name: ensure ~/.ssh exists
-      file:
-        path: /root/.ssh
-        state: directory
-        
-    - name: ensure ~/.ssh/authorized_keys exists
-      file:
-        path: /root/.ssh/authorized_keys
-        state: touch 
-        
-    - name: add management public key
-      lineinfile:
-        path: /root/.ssh/authorized_keys
-        line: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILZRBMNpKYCxW5RfcMlVOZzM9msh2s6s3OzWS4e97xAm g4-pinet"
+    - name: notes 2
+      debug:
+        msg: "http://minimum-viable-automation.com/ansible/use-ansible-create-user-accounts-setup-ssh-keys/"
