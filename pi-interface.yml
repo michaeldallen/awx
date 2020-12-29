@@ -12,9 +12,6 @@
       command: raspi-config nonint do_spi 0
       when: result.stdout == "1"
       
-    - debug:
-        msg: "{{ result }}"
-
     - name: get SPI status 
       command: raspi-config nonint get_spi
       changed_when: False
