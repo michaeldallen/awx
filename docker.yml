@@ -1,46 +1,8 @@
 - name: install docker
   hosts: all
   tasks:
-    - debug:
-        msg: "instructions from https://withblue.ink/2020/06/24/docker-and-docker-compose-on-raspberry-pi-os.html"
-
-
      
-    - name: Install some required packages first
-      apt:
-        update_cache: yes
-        pkg:
-        - apt-transport-https
-        - ca-certificates
-        - curl
-        - gnupg2
-        - software-properties-common
-        
-    - name: Get the Docker signing key for packages
-      apt_key:
-        url: https://download.docker.com/linux/raspbian/gpg
-        state: present
-        
-    - name: Add the Docker official repos
-      apt_repository:
-        repo: deb [arch=armhf] https://download.docker.com/linux/raspbian      buster stable
-        state: present
-        
-    - name: apt-get update
-      apt:
-        update_cache: yes
-        
-    - name: Install Docker
-      apt:
-        pkg:
-        - docker-ce
-        - cgroupfs-mount
-        
-    - name: have the Docker service started and automatically launched at boot
-      systemd:
-        name: docker
-        enabled: yes
-        state: restarted
-
+    - name: just install from docker.com
+      command: curl -sSL https://get.docker.com | tee get-docker.sh && sh get-docker.sh
 
 
