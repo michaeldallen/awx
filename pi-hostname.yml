@@ -31,7 +31,7 @@
     - debug:
         msg: "I think I should be {{ mac2hostname[hostvars[inventory_hostname].ansible_default_ipv4.macaddress].name }}"
 
-    - debug: 
-        msg: "time for a change"
+    - name: set hostname based on MAC address 
+      command: echo raspi-config nonint do_hostname {{ mac2hostname[hostvars[inventory_hostname].ansible_default_ipv4.macaddress].name }}
       when: not mac2hostname[hostvars[inventory_hostname].ansible_default_ipv4.macaddress].name == ansible_hostname
       
