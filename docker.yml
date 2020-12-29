@@ -7,5 +7,12 @@
      
     - name:  install from docker.com
       command: curl -fsSL https://get.docker.com -o get-docker.sh
+      
+    - name: test
+      command: pwd
+      
+    - name: test2
+      command: ls -l
+      
 
 
