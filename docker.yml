@@ -22,7 +22,6 @@
 
     - name: this is dumber
       command: sh get-docker.sh
-      failed_when: False
       register: result2
       
     - debug:
