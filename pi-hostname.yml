@@ -39,3 +39,10 @@
       reboot:
       when: not mac2hostname[hostvars[inventory_hostname].ansible_default_ipv4.macaddress].name == ansible_hostname
   
+    - debug:
+        msg: "and now I think I am {{ ansible_hostname }}"
+
+    - debug:
+        msg: " and now I think I should be {{ mac2hostname[hostvars[inventory_hostname].ansible_default_ipv4.macaddress].name }}"
+
+
