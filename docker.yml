@@ -37,6 +37,7 @@
     - name: try docker hello world to see if docker is functional
       command: docker run hello-world
       register: hello_again
+      when: not hello.rc == 0
       changed_when: False
 
 
