@@ -23,6 +23,10 @@
     - name: this is dumber
       command: sh get-docker.sh
       register: result2
+      when: not result.rc == 0
       
     - debug:
         msg: "{{ result2 }}"
+      when: not result.rc == 0
+
+
