@@ -13,6 +13,9 @@
       register: hello
       failed_when: False
 
+    - debug:
+        msg: "{{ hello }}"
+      
     - name: this is dumb
       command: sh get-docker.sh
       failed_when: False
