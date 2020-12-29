@@ -3,6 +3,6 @@
   tasks:
      
     - name: just install from docker.com
-      command: curl -sSL https://get.docker.com | tee get-docker.sh && sh get-docker.sh
+      command: curl -fsSL https://get.docker.com -o get-docker.sh
 
 
