@@ -5,15 +5,14 @@
 
     - name: get SPI status 
       command: raspi-config nonint get_spi
-      register: result_before
+      register: result
       changed_when: False
 
     - name: set SPI enabled 
       command: raspi-config nonint do_spi 0
-      register: result_after
       
     - debug:
-        msg: "{{ result_after }}"
+        msg: "{{ result }}"
 
     - name: get SPI status 
       command: raspi-config nonint get_spi
