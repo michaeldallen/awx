@@ -30,3 +30,8 @@
 
     - debug:
         msg: "I think I should be {{ mac2hostname[hostvars[inventory_hostname].ansible_default_ipv4.macaddress].name }}"
+
+    - debug: 
+        msg: "time for a change"
+      when: not mac2hostname[hostvars[inventory_hostname].ansible_default_ipv4.macaddress].name == ansible_hostname
+      
