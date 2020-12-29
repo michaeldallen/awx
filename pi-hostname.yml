@@ -35,3 +35,7 @@
       command: echo raspi-config nonint do_hostname {{ mac2hostname[hostvars[inventory_hostname].ansible_default_ipv4.macaddress].name }}
       when: not mac2hostname[hostvars[inventory_hostname].ansible_default_ipv4.macaddress].name == ansible_hostname
       
+    - name: bounce after setting hostname
+      reboot:
+      when: not mac2hostname[hostvars[inventory_hostname].ansible_default_ipv4.macaddress].name == ansible_hostname
+  
