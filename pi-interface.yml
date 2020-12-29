@@ -1,11 +1,14 @@
-- name: enable I2C and SPI interfaces
+- name: enable SPI interface
   hosts: all
 
   tasks:
 
-    - name: get I2C enabled 
-      command: raspi-config nonint get_i2c
+    - name: get SPI status 
+      command: raspi-config nonint get_spi
 
-    - name: get SPI enabled 
+    - name: set SPI enabled 
+      command: raspi-config nonint do_spi 0
+
+    - name: get SPI status 
       command: raspi-config nonint get_spi
 
