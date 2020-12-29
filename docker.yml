@@ -16,6 +16,14 @@
     - debug:
         msg: "{{ result }}"
         
+    - name: bounce to make docker happy and me unhappy
+      reboot:
+      when: not result.rc == 0
+
+    - name: this is dumber
+      command: sh get-docker.sh
+      failed_when: False
+      register: result2
       
-
-
+    - debug:
+        msg: "{{ result2 }}"
