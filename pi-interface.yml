@@ -13,7 +13,7 @@
       register: result_after
       
     - debug:
-        msg: {{ result_after }}
+        msg: "{{ result_after }}"
 
     - name: get SPI status 
       command: raspi-config nonint get_spi
