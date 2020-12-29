@@ -13,9 +13,6 @@
       changed_when: False
       failed_when: False
 
-    - debug:
-        msg: "{{ hello }}"
-      
     - name:  fetch installer from docker.com
       command: curl -fsSL https://get.docker.com -o get-docker.sh
       changed_when: False
@@ -42,4 +39,7 @@
       when: not hello.rc == 0
       changed_when: False
 
-
+    - debug:
+        msg: "{{ hello_again }}"
+      when: not hello.rc == 0
+      changed_when: False
