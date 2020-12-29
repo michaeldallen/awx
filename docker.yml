@@ -7,10 +7,13 @@
      
     - name:  fetch installer from docker.com
       command: curl -fsSL https://get.docker.com -o get-docker.sh
+      changed_when: False
+
       
     - name: try docker hello world to see if docker is functional
       command: docker run hello-world
       register: hello
+      changed_when: False
       failed_when: False
 
     - debug:
