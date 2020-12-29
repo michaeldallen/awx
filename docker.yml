@@ -10,6 +10,11 @@
       
     - name: this is dumb
       command: sh get-docker.sh
+      register: result
+      
+    - debug:
+        msg: "{{ result }}"
+        
       
 
 
