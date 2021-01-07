@@ -3,10 +3,10 @@
   tasks:
     - name: uptime
       command: uptime
-      failed_when: False
+      changed_when: False
 
         
     - name: check docker engine responsiveness
       command: docker ps
-      failed_when: False
+      changed_when: False
       
