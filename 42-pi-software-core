@@ -1,0 +1,8 @@
+- name: apt dist upgrade
+  hosts: all
+  tasks:
+    - name: Install a list of packages common to all targets  
+      apt:
+        pkg:
+        - python-dev       
+        - python-virtualenv
