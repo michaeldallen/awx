@@ -1,17 +1,15 @@
 - name: common core software
   hosts: all
   tasks:
-    - name: Install a list of packages common to all targets  
-      apt:
-        pkg:
-        - python-dev       
-        - python-virtualenv
+  - name: Install a list of packages common to all targets  
+    apt:
+      pkg:
+      - python-dev       
+      - python-virtualenv
         
-- name: docker stuff
+- name: python docker stuff
   hosts: pitft
-  tasks:
-    - apt:
-        pkg:
-        - docker-py
-        
-        
+  tasks: 
+  - name: Install python package needed by the docker-sphere
+    pip:
+      name: docker
