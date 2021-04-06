@@ -4,9 +4,9 @@
   - name: Install a list of packages common to all targets  
     apt:
       pkg:
-      - python3-dev
-      - python3-pip
-      - python3-virtualenv
+      - python-dev
+      - python-pip
+      - python-virtualenv
         
 - name: python docker stuff
   hosts: pitft
