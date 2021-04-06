@@ -1,6 +1,6 @@
 - name: pitft
   hosts: pitft
   tasks:
-    - name: Hello Message pitft
-      debug:
-        msg: "Hello Pi TFT!"
+  - name: Hello Message pitft
+    debug:
+      msg: "Hello Pi TFT!"
