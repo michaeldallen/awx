@@ -13,4 +13,8 @@
   tasks: 
   - name: Install python package needed by the docker-sphere
     pip:
-      name: docker-py
+      name: 
+      - docker
+      - docker-py
+
+
