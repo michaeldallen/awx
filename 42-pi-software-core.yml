@@ -6,3 +6,6 @@
         pkg:
         - python-dev       
         - python-virtualenv
+        - docker-py
+        
+        
