@@ -4,9 +4,6 @@
 - name: install docker
   hosts: all
   tasks:
-     
-
-      
     - name: try docker hello world to see if docker is installed
       command: docker run hello-world
       register: hello
