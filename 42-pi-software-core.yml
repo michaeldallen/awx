@@ -1,4 +1,4 @@
-- name: apt dist upgrade
+- name: common core software
   hosts: all
   tasks:
     - name: Install a list of packages common to all targets  
@@ -6,6 +6,12 @@
         pkg:
         - python-dev       
         - python-virtualenv
+        
+- name: docker stuff
+  hosts: pitft
+  tasks:
+    - apt:
+        pkg:
         - docker-py
         
         
