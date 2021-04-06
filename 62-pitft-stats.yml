@@ -1,6 +1,13 @@
 - name: pitft
   hosts: pitft
   tasks:
+  
   - name: Hello Message pitft
     debug:
       msg: "Hello Pi TFT!"
+      
+  - name: Start a container with a command
+    docker_container:
+      name: sleepy
+      image: ubuntu:14.04
+      command: ["sleep", "infinity"]
